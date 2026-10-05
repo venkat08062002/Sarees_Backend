@@ -1,1 +1,5 @@
 # Development environment profile
+
+logging:
+  level:
+    com.sarees.ecommerce: DEBUG

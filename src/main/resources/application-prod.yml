@@ -1,1 +1,8 @@
 # Production environment profile
+
+logging:
+  level:
+    com.sarees.ecommerce: INFO
+    org.springframework.web: WARN
+  file:
+    name: ${LOG_FILE:logs/sarees-ecommerce-backend.log}

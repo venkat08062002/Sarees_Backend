@@ -17,3 +17,12 @@ spring:
 logging:
   level:
     com.sarees.ecommerce: INFO
+
+app:
+  jwt:
+    secret: test-secret-key-must-be-at-least-256-bits-long-for-hs256-algorithm
+    access-token-expiration-seconds: 3600
+    refresh-token-expiration-seconds: 604800
+  security:
+    password-reset-url: http://localhost:3000/reset-password
+    password-reset-expiration-minutes: 15

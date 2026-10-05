@@ -3,3 +3,16 @@ spring:
     name: sarees-ecommerce-backend
   profiles:
     active: ${SPRING_PROFILES_ACTIVE:local}
+
+logging:
+  level:
+    com.sarees.ecommerce: INFO
+
+app:
+  jwt:
+    secret: ${JWT_SECRET:change-me-use-at-least-32-characters-secret-key-here}
+    access-token-expiration-seconds: ${JWT_ACCESS_EXPIRATION:3600}
+    refresh-token-expiration-seconds: ${JWT_REFRESH_EXPIRATION:604800}
+  security:
+    password-reset-url: ${PASSWORD_RESET_URL:http://localhost:3000/reset-password}
+    password-reset-expiration-minutes: 15

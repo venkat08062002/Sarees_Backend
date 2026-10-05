@@ -1,1 +1,7 @@
 # Pre-production environment profile
+
+logging:
+  level:
+    com.sarees.ecommerce: INFO
+  file:
+    name: ${LOG_FILE:logs/sarees-ecommerce-backend.log}

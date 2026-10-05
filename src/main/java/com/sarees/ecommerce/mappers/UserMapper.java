@@ -1,6 +1,7 @@
 package com.sarees.ecommerce.mappers;
 
 import com.sarees.ecommerce.domain.dto.request.RegisterRequest;
+import com.sarees.ecommerce.domain.dto.response.LoginUserResponse;
 import com.sarees.ecommerce.domain.dto.response.RegisterResponse;
 import com.sarees.ecommerce.domain.enums.UserRole;
 import com.sarees.ecommerce.domain.enums.UserStatus;
@@ -30,6 +31,17 @@ public class UserMapper {
                 .role(user.getRole())
                 .status(user.getStatus())
                 .createdAt(user.getCreatedAt())
+                .build();
+    }
+
+    public LoginUserResponse toLoginUserResponse(User user) {
+        return LoginUserResponse.builder()
+                .id(user.getId())
+                .fullName(user.getFullName())
+                .email(user.getEmail())
+                .phone(user.getPhone())
+                .role(user.getRole())
+                .status(user.getStatus())
                 .build();
     }
 }
